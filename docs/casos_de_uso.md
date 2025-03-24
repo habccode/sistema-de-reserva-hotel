@@ -45,10 +45,10 @@ Si hubo pago, el Sistema de Pagos ha procesado y validado la transacción. *Sist
 
 ````
                            Case use:
-+-------------------+                        +-----------------+    +--------+  
-|     Cliente       |                        |  Recepcionista  |----|Agencia |
-+-------------------+                        +-----------------+    |de viaje|
-         |                                                 |          +-------+ 
++-------------------+                        +-----------------+      
+|     Cliente       |                        |  Recepcionista  |
++-------------------+                        +-----------------+    
+         |                                                 |         
          | Inicia Reserva                  Gestiona Reserva| 
          v                                                 v
 +---------------------+  <----------------- +------------------------+   
@@ -102,22 +102,7 @@ Si hubo pago, el Sistema de Pagos ha procesado y validado la transacción. *Sist
 | | |
 
 
-|  caso de uso | XXX (Agente de viajes) |
-|---|---|
-| sistemas de agencia de viajes| _administrador de agente de viajes_  |
-| Paquete de viaje | _Ofrece viajes con veneficios descuento y ofertas_ |
-| reserva paquetes con hoteles | _ habla con el hotel y le ofrece las ofertas entrantes a ver si le parece atractivo._  |
-| Administrador/recepcionista | _estudia si la oferta es beneficiosa y accede a conceder la reserva el administrador_ |   
-|  Notas |  _son una familia de 12 personas_ |
-| agencia de viajes  | _ envian a los clientes y pagan la reserva_ |
-|Fecha | _0?-??-20??_ |
 
-|  Atributo |||
-|---|---|---|
-| _Nombre_  | _Agente de viajes_  | _Tipo_ |
-| | |
-
----
 # Definicion de los casos de uso:
 
 |  Caso de Uso	CU | cliente  |
@@ -147,18 +132,7 @@ Si hubo pago, el Sistema de Pagos ha procesado y validado la transacción. *Sist
   |Fecha | _0?-??-20??_ |
 
 
-  Caso de Uso	CU | Administrador de agencia de viajes |
-  |---|---|
-  | Fuentes  | _gestiona el sistema de viajes_  |
-  | Actor  |  _se comunica con el administrador/recepcionista_ |
-  | Descripción | _gestiona el sistema y y asigna los paquetes de viaje al hotel tanto en temporada alta como baja_  |
-  | Flujo básico | _ gestiona las entradas y salida de los paquetes de viajes que cordina con el hotel_ |
-  | Pre-condiciones | _ Colabora con el hotel con porcentajes ajustables tanto pra los clientes como para las dos empresas_  |  
-  | Post-condiciones  | _Las temporadas bajas hacen pasquetes de reserva con un porcentaje un poco menos_  |  
-  |  Requerimientos | _gestiona los pagos con los clientes en especifico mayormente son con tarjeta de credito_  |
-  |  Notas |  _Comentarios: "La isla de tenerife fue eplendida 100% recomendado"_ |
-  | Autor  | _cliente_ |
-  |Fecha | _0?-??-20??_ |
+
 
 
 ---
@@ -204,6 +178,7 @@ Si hubo pago, el Sistema de Pagos ha procesado y validado la transacción. *Sist
 
   En la creacion de mi primer proyecto he tomado en cuenta todas las caracteristicas y requisitos necesarios, para su realizacion.
 
+ 
 
 
 
