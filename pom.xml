@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.example</groupId>
+    <groupId>backend.es.habccode</groupId>
     <artifactId>sistema-reserva-hotel</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>sistema-reserva-hotel</name>
@@ -85,7 +85,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>es.habccode.sistema.reserva.hotel.PrincipalApplication</mainClass>
+                    <mainClass>backend.es.habccode.sistema.reserva.hotel.Main</mainClass>
                 </configuration>
             </plugin>
         </plugins>

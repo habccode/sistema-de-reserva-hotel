@@ -13,6 +13,7 @@ module backend.es.habccode.sistema.reserva.hotel {
     exports backend.es.habccode.sistema.reserva.hotel;
     exports backend.es.habccode.sistema.reserva.hotel.controller;
     exports backend.es.habccode.sistema.reserva.hotel.model;
-    opens es.habccode.sistema.reserva.hotel.controller to javafx.fxml;
+    opens   backend.es.habccode.sistema.reserva.hotel.controller to javafx.fxml;
 
+    
 }

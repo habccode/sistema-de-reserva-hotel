@@ -17,46 +17,46 @@ public class LoginController {
 
     //text usuario
     @FXML
-    Text textUsuario;
+    private Text textUsuario;
 
     //textfoeld usuario
     
     @FXML
-    TextField textFieldUsuario;
+    private TextField textFieldUsuario;
     
     //text contrasenia
     @FXML
-    Text textContrasenia;
+    private Text textContrasenia;
 
     //passwordfield contrasenia
     @FXML
-    PasswordField passwordFieldContrasenia;
+    private PasswordField passwordFieldContrasenia;
 
     //text iniciar sesion
     @FXML
-    Text textIniciarSesion;
+    private Text textIniciarSesion;
 
     //boton iniciar sesion
     @FXML
-    Button buttonIniciarSesion;
+    private Button buttonIniciarSesion;
 
 
     //text recuperar contrasenia
     @FXML
-    Text textRecuperarContrasenia;
+    private Text textRecuperarContrasenia;
 
     //textfield recuperar contrasenia
     @FXML
-    Button buttonRecuperarContrasenia;
+    private Button buttonRecuperarContrasenia;
 
 
     //text registrarse
     @FXML
-    Text textRegistrarse;
+    private Text textRegistrarse;
 
     //button de registrarse
     @FXML
-    Button buttonRegistarse;
+    private Button buttonRegistarse;
 
 
 
@@ -76,10 +76,10 @@ public class LoginController {
         textIniciarSesion.setText("Usuario validado correctamente");
     }
 
+    @FXML
+    protected void onClickButtonRegistarse(){}
 
-
-
-
-
-
+    @FXML
+    protected void onClickButtonRecuperarContrasenia(){}
+    
 }
