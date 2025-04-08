@@ -1,5 +1,4 @@
 package backend.es.habccode.sistema.reserva.hotel.controller;
-
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
