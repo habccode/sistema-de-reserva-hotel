@@ -10,13 +10,32 @@ import javafx.stage.Stage;
 
 public class RegisterController {
     
-    @FXML Text textUsuario;
+    @FXML  Text textUsuario;
 
-    @FXML TextField textFieldUsuario;
+    @FXML TextField TextFieldUsuario;
 
-    @FXML Text textUsuarioRepeat;
+    @FXML Text textUsuario1;
 
-    @FXML TextField textFieldUsuarioRepeat;
+    @FXML TextField textFieldUsuario1;
 
+    @FXML Text textEmail;
 
-}
+    @FXML TextField textFieldEmail;
+
+    @FXML Text textEmail1;
+
+    @FXML TextField textFieldEmail1;
+
+    @FXML Text textPassword;
+
+    @FXML TextField textFieldPassword;
+
+    @FXML Text textPassword1;
+
+    @FXML TextField textFieldPassword1;
+
+    @FXML Button buttonBack;
+
+    @FXML Button buttonRegister;
+
+    }
