@@ -1,15 +1,20 @@
 package backend.es.habccode.sistema.reserva.hotel.controller;
+import java.util.ArrayList;
+import java.util.List;
+
+import backend.es.habccode.sistema.reserva.hotel.controller.abstractas.AbstractController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 
-public class LoginController {
+public class LoginController extends AbstractController {
     private final String usuario = "primer usuario";
     private final String contrasenia = "primer usuario";
 
@@ -56,6 +61,28 @@ public class LoginController {
     //button de registrarse
     @FXML
     private Button buttonRegistarse;
+
+
+    // boton de idioma
+    @FXML
+    private ComboBox comboIdioma;
+
+  
+    @FXML
+    public void initialize(){
+        List<String> idiomas = new ArrayList<>();
+        idiomas.add("es");
+        idiomas.add("en");
+        comboIdioma.getItems().addAll(idiomas);
+    }
+
+    @FXML
+    protected void cambiarIdioma() {
+        setPropertiesIdioma(loadIdioma("idioma", comboIdioma.getValue().toString()));
+        textUsuario.setText(getPropertiesIdioma().getProperty("textUsuario"));
+        textContrasenia.setText(getPropertiesIdioma().getProperty("textContrasenia"));
+    }
+
 
 
 
