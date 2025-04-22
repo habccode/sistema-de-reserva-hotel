@@ -11,7 +11,7 @@
 
 <AnchorPane fx:id="aaaa" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="530.0" styleClass="anchor-pane" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="backend.es.habccode.sistema.reserva.hotel.controller.LoginController">
    <children>
-      <ComboBox fx:id="comboIdioma" layoutX="18.0" layoutY="27.0" prefHeight="24.0" prefWidth="111.0" promptText="Idioma" style="-fx-background-color: fffb91;" />
+      <ComboBox fx:id="comboIdioma" layoutX="18.0" layoutY="27.0" onAction="#cambiarIdioma" prefHeight="24.0" prefWidth="111.0" promptText="Idioma" style="-fx-background-color: fffb91;" />
       <Text fx:id="textUsuario" fill="#fffb91" layoutX="228.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ususario:" wrappingWidth="73.0">
          <font>
             <Font size="14.0" />
