@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 
 
 public class LoginController extends AbstractController {
+    
     private final String usuario = "primer usuario";
     private final String contrasenia = "primer usuario";
 
@@ -71,8 +72,8 @@ public class LoginController extends AbstractController {
     @FXML
     public void initialize(){
         List<String> idiomas = new ArrayList<>();
-        idiomas.add("es");
         idiomas.add("en");
+        idiomas.add("es");
         comboIdioma.getItems().addAll(idiomas);
     }
 

@@ -38,10 +38,11 @@ public abstract class AbstractController {
         try {
             FileInputStream input = new FileInputStream(path);
             InputStreamReader isr = new InputStreamReader(input, "UtF-8");
+            properties.load(isr);
         } catch(Exception e){
             e.printStackTrace();
         }
-                return properties;
+         return properties;
     }
 
 
