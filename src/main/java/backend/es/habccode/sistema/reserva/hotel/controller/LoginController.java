@@ -2,6 +2,7 @@ package backend.es.habccode.sistema.reserva.hotel.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import backend.es.habccode.sistema.reserva.hotel.Main;
 import backend.es.habccode.sistema.reserva.hotel.controller.abstractas.AbstractController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -61,7 +62,7 @@ public class LoginController extends AbstractController {
 
     //button de registrarse
     @FXML
-    private Button buttonRegistarse;
+    private Button onbuttonRegistarse;
 
 
     // boton de idioma
@@ -104,7 +105,18 @@ public class LoginController extends AbstractController {
     }
 
     @FXML
-    protected void onClickButtonRegistarse(){}
+    protected void openClickButtonRegistarse(){
+        try {
+            Stage stage = (Stage) onbuttonRegistarse.getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/view/register.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            stage.setTitle("Pantalla Registro");
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     @FXML
     protected void onClickButtonRecuperarContrasenia(){}
