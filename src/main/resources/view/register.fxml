@@ -8,12 +8,15 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="TOP_CENTER" prefHeight="852.0" prefWidth="1030.0" styleClass="VBox" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="backend.es.habccode.sistema.reserva.hotel.controller.RegisterController">
+<VBox alignment="TOP_CENTER" prefHeight="852.0" prefWidth="1030.0" styleClass="VBox" stylesheets="@../style/style.css"
+   xmlns="http://javafx.com/javafx/21"
+   xmlns:fx="http://javafx.com/fxml/1" fx:controller="backend.es.habccode.sistema.reserva.hotel.controller.RegisterController">
    <children>
       <Button fx:id="buttonBack" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#openClikButtonBack" prefHeight="24.0" prefWidth="68.0" style="-fx-background-color: fffb91;" text="Back">
          <VBox.margin>
             <Insets right="800.0" top="30.0" />
-         </VBox.margin></Button>
+         </VBox.margin>
+      </Button>
       <Text fx:id="textUsuario" fill="#fffb91" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario:" wrappingWidth="83.0">
          <font>
             <Font size="14.0" />
@@ -25,7 +28,8 @@
       <TextField fx:id="TextFieldUsuario" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="679.0" promptText="Usuario">
          <VBox.margin>
             <Insets bottom="10.0" />
-         </VBox.margin></TextField>
+         </VBox.margin>
+      </TextField>
       <Text fx:id="textUsuario1" fill="#fffb91" strokeType="OUTSIDE" strokeWidth="0.0" text="repeat-Usuario:" wrappingWidth="120.0">
          <font>
             <Font size="14.0" />
@@ -37,7 +41,8 @@
       <TextField fx:id="textFieldUsuario1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="672.0" promptText="repeat-Usuario">
          <VBox.margin>
             <Insets bottom="10.0" />
-         </VBox.margin></TextField>
+         </VBox.margin>
+      </TextField>
       <Text fx:id="textEmail" fill="#fffb91" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" wrappingWidth="83.0">
          <font>
             <Font size="14.0" />
@@ -49,7 +54,8 @@
       <TextField fx:id="textFieldEmail" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="668.0" promptText="email">
          <VBox.margin>
             <Insets bottom="10.0" />
-         </VBox.margin></TextField>
+         </VBox.margin>
+      </TextField>
       <Text fx:id="textEmail1" fill="#fffb91" strokeType="OUTSIDE" strokeWidth="0.0" text="repeat-Email:" wrappingWidth="120.0">
          <font>
             <Font size="14.0" />
@@ -61,7 +67,8 @@
       <TextField fx:id="textFieldEmail1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="667.0" promptText="repeat-email">
          <VBox.margin>
             <Insets bottom="10.0" />
-         </VBox.margin></TextField>
+         </VBox.margin>
+      </TextField>
       <Text fx:id="textPassword" fill="#fffb91" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" wrappingWidth="83.0">
          <font>
             <Font size="14.0" />
@@ -73,7 +80,8 @@
       <PasswordField fx:id="textFieldPassword" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="669.0" promptText="Password">
          <VBox.margin>
             <Insets bottom="10.0" />
-         </VBox.margin></PasswordField>
+         </VBox.margin>
+      </PasswordField>
       <Text fx:id="textPassword1" fill="#fffb91" strokeType="OUTSIDE" strokeWidth="0.0" text="repeat- Password:" wrappingWidth="136.0">
          <font>
             <Font size="14.0" />
@@ -85,7 +93,8 @@
       <PasswordField fx:id="textFieldPassword1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="663.0" promptText="repeat-Password">
          <VBox.margin>
             <Insets bottom="30.0" />
-         </VBox.margin></PasswordField>
+         </VBox.margin>
+      </PasswordField>
       <Button fx:id="buttonRegister" mnemonicParsing="false" prefHeight="38.0" prefWidth="136.0" style="-fx-background-color: fffb91;" text="Register" />
    </children>
 </VBox>

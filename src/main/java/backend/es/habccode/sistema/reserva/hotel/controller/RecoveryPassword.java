@@ -11,18 +11,38 @@ import javafx.stage.Stage;
 
 public class RecoveryPassword {
     
-    @FXML Button buttonBack;
-
-    @FXML Text textEmail1;
-
-    @FXML Text textEmail;
-
-    @FXML TextField textFielEmail;
-
-    @FXML Text textEmail11;
-
+    // button de ir a la interface anterior
     @FXML Button buttonAtras;
+    
+    //text de email
+    @FXML Text textEmail1;
+    
+    // tex de email
+    @FXML Text textEmail;
+    
+    //text textField del formulario
+    @FXML TextField textFielEmail;
+    
+    //text email
+    @FXML Text textEmail11;
+    
+    //Boton de enviar el formulario
+    @FXML Button buttonSend;
 
+
+    @FXML
+    protected void openClickButtonAtras(){
+       try {
+        Stage stage = (Stage) buttonAtras.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/view/login.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+            stage.setTitle("Pantalla Recuperar Contraseña");
+            stage.setScene(scene);
+            stage.show();
+       } catch (Exception e) {
+        e.printStackTrace();    
+       } 
+    }
     
 
 
