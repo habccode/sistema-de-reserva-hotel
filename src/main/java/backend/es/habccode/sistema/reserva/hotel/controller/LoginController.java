@@ -62,7 +62,7 @@ public class LoginController extends AbstractController {
 
     //button de registrarse
     @FXML
-    private Button onbuttonRegistarse;
+    private Button buttonRegister;
 
 
     // boton de idioma
@@ -83,6 +83,12 @@ public class LoginController extends AbstractController {
         setPropertiesIdioma(loadIdioma("idioma", comboIdioma.getValue().toString()));
         textUsuario.setText(getPropertiesIdioma().getProperty("textUsuario"));
         textContrasenia.setText(getPropertiesIdioma().getProperty("textContrasenia"));
+        textIniciarSesion.setText(getPropertiesIdioma().getProperty("textIniciarSesion"));
+        buttonIniciarSesion.setText(getPropertiesIdioma().getProperty("buttonIniciarSesion"));
+        textRecuperarContrasenia.setText(getPropertiesIdioma().getProperty("textRecuperarContrasenia"));
+        buttonRecuperarContrasenia.setText(getPropertiesIdioma().getProperty("buttonRecuperarContrasenia"));
+        textRegistrarse.setText(getPropertiesIdioma().getProperty("textRegistrarse"));
+        buttonRegister.setText(getPropertiesIdioma().getProperty("buttonRegister"));
     }
 
 
@@ -105,9 +111,9 @@ public class LoginController extends AbstractController {
     }
 
     @FXML
-    protected void openClickButtonRegistarse(){
+    protected void openClickButtonRegister(){
         try {
-            Stage stage = (Stage) onbuttonRegistarse.getScene().getWindow();
+            Stage stage = (Stage) buttonRegister.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/view/register.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             stage.setTitle("Pantalla Registro");
@@ -119,6 +125,17 @@ public class LoginController extends AbstractController {
     }
 
     @FXML
-    protected void onClickButtonRecuperarContrasenia(){}
+    protected void onClickButtonRecuperarContrasenia(){
+       try {
+        Stage stage = (Stage) buttonRegister.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/view/recoveryPassword.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+            stage.setTitle("Pantalla Recuperar Contraseña");
+            stage.setScene(scene);
+            stage.show();
+       } catch (Exception e) {
+        e.printStackTrace();    
+       } 
+    }
     
 }
