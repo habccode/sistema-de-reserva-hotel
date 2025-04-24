@@ -1,4 +1,4 @@
-.anchor-pane {
+.VBox {
     -fx-background-image: url('../img/light-background.jpg'); /* Ajusta la ruta */
     -fx-background-size: cover; /* Ajusta la imagen para cubrir el área */
     -fx-background-repeat: no-repeat; /* Evita que la imagen se repita */
