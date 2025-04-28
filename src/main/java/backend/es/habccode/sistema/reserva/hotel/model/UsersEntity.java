@@ -7,7 +7,7 @@ import java.util.Objects;
  * @author Habccode
  * @version 1.0
  */
-public class Users {
+public class UsersEntity {
     // le empleamos para guardar los datos de los usuarios
     private String usuario;
     private String Contrasenia;
@@ -18,7 +18,7 @@ public class Users {
      * Constructor vacio de la clase Users
      */
     // lo empleamos para guardar los datos de los usuarios
-    public Users() {
+    public UsersEntity() {
     }
     
 
@@ -27,18 +27,18 @@ public class Users {
      * Constructor de la clase Users
      * @param usuario
      */
-    public Users(String email) {
+    public UsersEntity(String email) {
         this.email = email;
     }
 
 
     /**
-     * Constructor de la clase Users
+     * Constructor de la clase UsersEntity
      * @param usuario
      * @param Contrasenia
      * @param email
      */
-    public Users(String usuario, String Contrasenia, String email) {
+    public UsersEntity(String usuario, String Contrasenia, String email) {
         this.usuario = usuario;
         this.Contrasenia = Contrasenia;
         this.email = email;
@@ -71,17 +71,17 @@ public class Users {
         this.email = email;
     }
 
-    public Users usuario(String usuario) {
+    public UsersEntity usuario(String usuario) {
         setusuario(usuario);
         return this;
     }
 
-    public Users Contrasenia(String Contrasenia) {
+    public UsersEntity Contrasenia(String Contrasenia) {
         setContrasenia(Contrasenia);
         return this;
     }
 
-    public Users email(String email) {
+    public UsersEntity email(String email) {
         setEmail(email);
         return this;
     }
@@ -90,7 +90,7 @@ public class Users {
 
 
     /**
-     * Compara dos objetos Users
+     * Compara dos objetos UsersEntity
      * @param o objeto a comparar
      * @return true si son iguales, false si no
      */
@@ -98,11 +98,11 @@ public class Users {
     public boolean equals(Object o) {
         if (o == this)
             return true;
-        if (!(o instanceof Users)) {
+        if (!(o instanceof UsersEntity)) {
             return false;
         }
-        Users users = (Users) o;
-        return Objects.equals(email, users.email);
+        UsersEntity usersEntity = (UsersEntity) o;
+        return Objects.equals(email, usersEntity.email);
     }
 
 
