@@ -10,7 +10,7 @@ import java.util.Objects;
 public class UsersEntity {
     // le empleamos para guardar los datos de los usuarios
     private String usuario;
-    private String Contrasenia;
+    private String contrasenia;
     private String email;
    
 
@@ -40,7 +40,7 @@ public class UsersEntity {
      */
     public UsersEntity(String usuario, String Contrasenia, String email) {
         this.usuario = usuario;
-        this.Contrasenia = Contrasenia;
+        this.contrasenia = Contrasenia;
         this.email = email;
 }
 
@@ -56,11 +56,11 @@ public class UsersEntity {
     }
 
     public String getContrasenia() {
-        return this.Contrasenia;
+        return this.contrasenia;
     }
 
     public void setContrasenia(String Contrasenia) {
-        this.Contrasenia = Contrasenia;
+        this.contrasenia = contrasenia;
     }
 
     public String getEmail() {

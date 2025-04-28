@@ -6,32 +6,42 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Properties;
 
+import backend.es.habccode.sistema.reserva.hotel.model.UserServiceModel;
+
 public abstract class AbstractController {
-
+   
+    private UserServiceModel userServiceModel;
+   
     private Properties propertiesIdioma;
+   
+    private String pathBD = ("src/main/resources/usuariosHotel.db");
 
-    public void setPropertiesIdioma(Properties properties){
+    
+    public AbstractController() {
+        userServiceModel = new UserServiceModel(pathBD);
+    }
+
+    public void setPropertiesIdioma(Properties properties) {
         propertiesIdioma = properties;
     }
 
-
-    public Properties getPropertiesIdioma(){
+    public Properties getPropertiesIdioma() {
         return propertiesIdioma;
     }
 
-    public Properties loadIdioma(String nombreFichero, String idioma){
+    public Properties loadIdioma(String nombreFichero, String idioma) {
         Properties properties = new Properties();
-        
+
         if (nombreFichero == null || idioma == null) {
             return properties;
         }
 
-        String path = "src/main/resources/" + nombreFichero+"-"+idioma+".properties";
+        String path = "src/main/resources/" + nombreFichero + "-" + idioma + ".properties";
 
         File file = new File(path);
 
         if (!file.exists() || !file.isFile()) {
-            System.out.println("Path:"+file.getAbsolutePath());
+            System.out.println("Path:" + file.getAbsolutePath());
             return properties;
         }
 
@@ -39,11 +49,10 @@ public abstract class AbstractController {
             FileInputStream input = new FileInputStream(path);
             InputStreamReader isr = new InputStreamReader(input, "UtF-8");
             properties.load(isr);
-        } catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
-         return properties;
+        return properties;
     }
-
 
 }

@@ -1,75 +1,90 @@
 package backend.es.habccode.sistema.reserva.hotel.controller;
+
 import backend.es.habccode.sistema.reserva.hotel.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
 /**
  * @author: habccode
  * @version: 1.0.0
  */
 public class RegisterController {
-    
-    //texto de usuario
-    @FXML  Text textUsuario;
+
+    // texto de usuario
+    @FXML
+    Text textUsuario;
 
     // texto de usuario1
-    @FXML Text textUsuario1;
+    @FXML
+    Text textUsuario1;
 
-    //text fiel de repetir usuario
-    @FXML TextField textFieldUsuario1;
+    // text fiel de repetir usuario
+    @FXML
+    TextField textFieldUsuario1;
 
-
-    // text email 
-    @FXML Text textEmail;
-
+    // text email
+    @FXML
+    Text textEmail;
 
     // textfiel del email
-    @FXML TextField textFieldEmail;
+    @FXML
+    TextField textFieldEmail;
 
     // text de recuperar email
-    @FXML Text textEmail1;
+    @FXML
+    Text textEmail1;
 
     // textfield de recuperar el email
-    @FXML TextField textFieldEmail1;
+    @FXML
+    TextField textFieldEmail1;
 
     // text de la contraseña
-    @FXML Text textPassword;
+    @FXML
+    Text textPassword;
 
-    //textfoel de la contraseña
-    @FXML TextField textFieldPassword;
+    // textfoel de la contraseña
+    @FXML
+    PasswordField textFieldPassword;
 
     // text de la contraseña
-    @FXML Text textPassword1;
+    @FXML
+    Text textPassword1;
 
     // textField de la confirmacion de la contraseña
-    @FXML TextField textFieldPassword1;
-
+    @FXML
+    PasswordField textFieldPassword1;
 
     // boton de atras
-    @FXML Button buttonBack;
-
+    @FXML
+    Button buttonBack;
 
     // boton registrar
-    @FXML Button buttonRegister;
-
+    @FXML
+    Button buttonRegister;
 
     // metodo de enlace a otra interface
-     @FXML
-    protected void openClikButtonBack(){
-       try {
-        Stage stage = (Stage) buttonRegister.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/view/login.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
+    @FXML
+    protected void openClikButtonBack() {
+        try {
+            Stage stage = (Stage) buttonRegister.getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/view/login.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
             stage.setTitle("Pantalla Recuperar Contraseña");
             stage.setScene(scene);
             stage.show();
-       } catch (Exception e) {
-        e.printStackTrace();    
-       } 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
+    @FXML
+    protected void onclickRegistrar(){
+        
     }
+}
