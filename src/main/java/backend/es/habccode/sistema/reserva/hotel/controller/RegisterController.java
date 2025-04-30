@@ -1,6 +1,10 @@
 package backend.es.habccode.sistema.reserva.hotel.controller;
 
+import java.util.ArrayList;
+
 import backend.es.habccode.sistema.reserva.hotel.Main;
+import backend.es.habccode.sistema.reserva.hotel.controller.abstractas.AbstractController;
+import backend.es.habccode.sistema.reserva.hotel.model.UsersEntity;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -14,11 +18,15 @@ import javafx.stage.Stage;
  * @author: habccode
  * @version: 1.0.0
  */
-public class RegisterController {
+public class RegisterController extends AbstractController {
 
     // texto de usuario
     @FXML
     Text textUsuario;
+
+    // textField
+    @FXML
+    TextField TextFieldUsuario;
 
     // texto de usuario1
     @FXML
@@ -26,7 +34,7 @@ public class RegisterController {
 
     // text fiel de repetir usuario
     @FXML
-    TextField textFieldUsuario1;
+    TextField textFieldUsuarioRepetir;
 
     // text email
     @FXML
@@ -40,9 +48,9 @@ public class RegisterController {
     @FXML
     Text textEmail1;
 
-    // textfield de recuperar el email
+    // textfield de repetir el email
     @FXML
-    TextField textFieldEmail1;
+    TextField textFieldEmailRepetir;
 
     // text de la contraseña
     @FXML
@@ -58,7 +66,7 @@ public class RegisterController {
 
     // textField de la confirmacion de la contraseña
     @FXML
-    PasswordField textFieldPassword1;
+    PasswordField textFieldPasswordRepetir;
 
     // boton de atras
     @FXML
@@ -67,6 +75,77 @@ public class RegisterController {
     // boton registrar
     @FXML
     Button buttonRegister;
+
+    // error de texto por comprobacion
+    @FXML
+    Text errorText;
+
+    /**
+     * 
+     */
+    @FXML
+    protected void onclickRegistrar() {
+        if (!comprobarRegistrar()) {
+            return;
+        }
+        UsersEntity nuevoUsuario = new UsersEntity(
+                TextFieldUsuario.getText(),
+                textFieldPassword.getText(),
+                textFieldEmail.getText());
+        ArrayList<UsersEntity> usuarioEntityList;
+        usuarioEntityList = getUserServiceModel().obtenerTodosLosUsuarios();
+        if (usuarioEntityList.contains(nuevoUsuario)) {
+            errorText.setText("Ya hay una cuenta registrada con ese correo");
+            return;
+        }
+        if (getUserServiceModel().obtenerUsuariosPorEmail(textFieldEmail.getText()) != null) {
+            errorText.setText("Ya hay una cuenta registrada con ese usuario");
+            return;
+        }
+        getUserServiceModel().agregarUser(nuevoUsuario);
+    }
+
+    /**
+     * comprobar que el registro se hizo de manera correcta
+     * 
+     * @return
+     */
+    private boolean comprobarRegistrar() {
+        if (!comprobarTextField(TextFieldUsuario)) {
+            errorText.setText("Usuario no puede estar vacio");
+            return false;
+        }
+        if (!comprobarTextField(textFieldUsuarioRepetir)) {
+            errorText.setText("Usuario no puede estar vacio");
+            return false;
+        }
+        if (!TextFieldUsuario.getText().equals(textFieldUsuarioRepetir)) {
+            errorText.setText("el usuario no coincide");
+        }
+        if (!comprobarTextField(textFieldPassword)) {
+            errorText.setText("Contraseña no puede estar vacia");
+            return false;
+        }
+        if (!comprobarTextField(textFieldPasswordRepetir)) {
+            errorText.setText("Repewtir contraseña no puede estar vacio");
+            return false;
+        }
+        if (!textFieldPassword.getText().equals(textFieldPasswordRepetir)) {
+            errorText.setText("las contraseñas no coinciden");
+        }
+        if (!comprobarTextField(textFieldEmail)) {
+            errorText.setText("El correo no puede estar vacio");
+        }
+        if (!comprobarTextField(textFieldEmailRepetir)) {
+            errorText.setText("El correo no puede estar vacio");
+            return false;
+        }
+        if (!textFieldEmail.getText().equals(textFieldEmailRepetir)) {
+            errorText.setText("los correos deben coincidir");
+            return false;
+        }
+        return true;
+    }
 
     // metodo de enlace a otra interface
     @FXML
@@ -83,8 +162,4 @@ public class RegisterController {
         }
     }
 
-    @FXML
-    protected void onclickRegistrar(){
-        
-    }
 }

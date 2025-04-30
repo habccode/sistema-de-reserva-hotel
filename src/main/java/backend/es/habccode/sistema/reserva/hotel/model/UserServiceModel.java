@@ -3,13 +3,14 @@ package backend.es.habccode.sistema.reserva.hotel.model;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.HashSet;
+import java.util.ArrayList;
+
 
 import backend.es.habccode.sistema.reserva.hotel.model.conexion.Conexion;
 
 public class UserServiceModel extends Conexion {
 
-    private HashSet<UsersEntity> usuarios;
+    private ArrayList<UsersEntity> usuarios;
 
     public UserServiceModel() {
         super();
@@ -17,7 +18,7 @@ public class UserServiceModel extends Conexion {
 
     public UserServiceModel(String pathBD) {
         super(pathBD);
-        usuarios = new HashSet<>();
+        usuarios = new ArrayList<>();
     }
 
     /**
@@ -25,12 +26,13 @@ public class UserServiceModel extends Conexion {
      * @param sqlSentencia para obtener usuarios
      * @return una lista de usuarios
      */
-    public HashSet<UsersEntity> loadUser(String sqlSentencia) {
-        HashSet<UsersEntity> usuarioEntities = new HashSet<>();
+    public ArrayList<UsersEntity> loadUser(String sqlSentencia) {
+        ArrayList<UsersEntity> usuarioEntities = new ArrayList<>();
         try {
 
             PreparedStatement sentencia = conectar().prepareStatement(sqlSentencia);
             ResultSet resultado = sentencia.executeQuery();
+
             while (resultado.next()) {
                 String usersStr = resultado.getString("usuario");
                 String contraseniaStr = resultado.getString("contraseña");
@@ -38,20 +40,19 @@ public class UserServiceModel extends Conexion {
                 UsersEntity usuario = new UsersEntity(usersStr, contraseniaStr, emailStr);
                 usuarioEntities.add(usuario);
             }
-            return usuarioEntities;
         } catch (SQLException e) {
             e.printStackTrace();
         } finally{
             cerrarConexion();
         }
-                return usuarios;
+                return usuarioEntities;
     }
 
 
     public boolean escribirUser(String sqlSentencia ,UsersEntity user){
         try {
             PreparedStatement sentecia = conectar().prepareStatement(sqlSentencia);
-            sentecia.setString(1, user.getusuario());
+            sentecia.setString(1, user.getUsuario());
             sentecia.setString(2, user.getContrasenia());
             sentecia.setString(3, user.getEmail());
             sentecia.executeUpdate();
@@ -68,9 +69,55 @@ public class UserServiceModel extends Conexion {
         if (user == null) {
             return false;
         }
-        String sqlSentencia = "insert into usuario (usuario,contraseña,email) values (?,?,?)";
+        String sqlSentencia = "INSERT INTO usuarios (usuario, contraseña, email) VALUES (?, ?, ?)";
         return escribirUser(sqlSentencia, user);
         
+    }
+
+   
+      /**
+     * Metodo para obtener los datos de un usuario por el email
+     * @param email email del usuario buscado
+     * @return usuario buscado
+   
+    public UsersEntity obtenerUsuariosPorEmail(String email){
+        String sql = "SELECT * FROM usuarios WHERE email = '" + email + "'";
+        ArrayList<UsersEntity> usuarios = loadUser(sql);
+        if (usuarios.isEmpty()) {
+            return null;
+        }
+        return usuarios.get(0);
+    }   
+          */
+
+    public UsersEntity obtenerUsuariosPorEmail(String email) {
+        String sql = "SELECT * FROM usuarios WHERE email = ?";
+        try {
+            PreparedStatement stmt = conectar().prepareStatement(sql);
+            stmt.setString(1, email);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                return new UsersEntity(
+                    rs.getString("usuario"),
+                    rs.getString("contraseña"),
+                    rs.getString("email")
+                );
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            cerrarConexion();
+        }
+        return null;
+    }
+
+    /**
+     * Funcion que te devuleve todos los usuarios de la base de datos
+     * @return lista de usuarios
+     */
+    public ArrayList<UsersEntity> obtenerTodosLosUsuarios(){
+        String sql = "SELECT * FROM usuarios";
+        return loadUser(sql);
     }
 
 }

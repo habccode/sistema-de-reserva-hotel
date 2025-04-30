@@ -1,57 +1,43 @@
 package backend.es.habccode.sistema.reserva.hotel.model.conexion;
 
-import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+
 /**
- * @author: habccode
- * @version: 1.0.0
+ * Clase base para manejar la conexión a una base de datos SQLite.
+ * @author habccode
+ * @version 1.0.0
  */
 public class Conexion {
-    // declarar la conexion
     private Connection conexion;
     private String ruta;
 
-    /**
-     * Constructor vacio
-     */
-    public Conexion() {
+    // Constructor vacío
+    public Conexion() {}
 
-    }
-
-    /**
-     * constructor con la ruta
-     * @param pathDB la ruta de la base de datos
-     */
+    // Constructor con la ruta de la base de datos
     public Conexion(String pathDB) {
-        try {
-            if (pathDB == null || pathDB.isEmpty()) {
-                throw new SQLException("el path no existe o es nulo: " + pathDB);
-            }
-            File file = new File(pathDB);
-            if (!file.exists()) {
-                throw new SQLException("no existes la base de datos: " + pathDB);
-            }
-            ruta = pathDB;
-        } catch (SQLException e) {
-            e.printStackTrace();
+        if (pathDB == null || pathDB.isEmpty()) {
+            throw new IllegalArgumentException("El path de la base de datos es nulo o vacío.");
         }
+        this.ruta = pathDB;
     }
 
-    //regresa la ruta
-    public String getRuta(){
+    // Obtener ruta
+    public String getRuta() {
         return ruta;
     }
 
     /**
-     * metodo para conectar a base de datps
-     * @return
+     * Conecta a la base de datos SQLite.
+     * @return conexión activa
      */
-    public Connection conectar(){
+    public Connection conectar() {
         try {
-            if (conexion == null) {
-                conexion = DriverManager.getConnection(ruta);
+            if (conexion == null || conexion.isClosed()) {
+                String url = ruta.startsWith("jdbc:sqlite:") ? ruta : "jdbc:sqlite:" + ruta;
+                conexion = DriverManager.getConnection(url);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -60,19 +46,16 @@ public class Conexion {
     }
 
     /**
-     * metodo para cerrar
-     * la conexion de la base de datos
+     * Cierra la conexión con la base de datos.
      */
-    public void cerrarConexion(){
-       try {
-         if (conexion == null) {
-            return;
-         }
-         conexion.close();
-         conexion = null;
-       } catch (SQLException e) {
+    public void cerrarConexion() {
+        try {
+            if (conexion != null && !conexion.isClosed()) {
+                conexion.close();
+                conexion = null;
+            }
+        } catch (SQLException e) {
             e.printStackTrace();
-       }
+        }
     }
-
 }

@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="TOP_CENTER" prefHeight="852.0" prefWidth="1030.0" styleClass="VBox" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="backend.es.habccode.sistema.reserva.hotel.controller.RegisterController">
+<VBox alignment="TOP_CENTER" prefHeight="852.0" prefWidth="1030.0" styleClass="VBox" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="backend.es.habccode.sistema.reserva.hotel.controller.RegisterController">
    <children>
       <Button fx:id="buttonBack" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#openClikButtonBack" prefHeight="24.0" prefWidth="68.0" style="-fx-background-color: fffb91;" text="Back">
          <VBox.margin>
@@ -36,7 +36,7 @@
             <Insets bottom="10.0" />
          </VBox.margin>
       </Text>
-      <TextField fx:id="textFieldUsuario1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="672.0" promptText="repeat-Usuario">
+      <TextField fx:id="textFieldUsuarioRepetir" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="672.0" promptText="repeat-Usuario">
          <VBox.margin>
             <Insets bottom="10.0" />
          </VBox.margin>
@@ -62,7 +62,7 @@
             <Insets bottom="10.0" />
          </VBox.margin>
       </Text>
-      <TextField fx:id="textFieldEmail1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="667.0" promptText="repeat-email">
+      <TextField fx:id="textFieldEmailRepetir" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="667.0" promptText="repeat-email">
          <VBox.margin>
             <Insets bottom="10.0" />
          </VBox.margin>
@@ -88,11 +88,12 @@
             <Insets bottom="10.0" />
          </VBox.margin>
       </Text>
-      <PasswordField fx:id="textFieldPassword1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="663.0" promptText="repeat-Password">
+      <PasswordField fx:id="textFieldPasswordRepetir" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="663.0" promptText="repeat-Password">
          <VBox.margin>
             <Insets bottom="30.0" />
          </VBox.margin>
       </PasswordField>
+      <Text fx:id="errorText" fill="#fffb91" strokeType="OUTSIDE" strokeWidth="0.0" text="Registrarse:" />
       <Button fx:id="buttonRegister" mnemonicParsing="false" onAction="#onclickRegistrar" prefHeight="38.0" prefWidth="136.0" style="-fx-background-color: fffb91;" text="Register" />
    </children>
 </VBox>

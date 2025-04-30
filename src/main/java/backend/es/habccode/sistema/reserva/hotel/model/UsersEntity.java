@@ -1,7 +1,5 @@
 package backend.es.habccode.sistema.reserva.hotel.model;
 import java.util.Objects;
-
-
 /**
  * Clase Users
  * @author Habccode
@@ -25,7 +23,7 @@ public class UsersEntity {
 
     /**
      * Constructor de la clase Users
-     * @param usuario
+     * @param usuario.
      */
     public UsersEntity(String email) {
         this.email = email;
@@ -47,11 +45,11 @@ public class UsersEntity {
 
 
     // Getters y Setters
-    public String getusuario() {
+    public String getUsuario() {
         return this.usuario;
     }
 
-    public void setusuario(String usuario) {
+    public void setUsuario(String usuario) {
         this.usuario = usuario;
     }
 
@@ -59,9 +57,12 @@ public class UsersEntity {
         return this.contrasenia;
     }
 
-    public void setContrasenia(String Contrasenia) {
+    public void setContrasenia(String contrasenia) {
         this.contrasenia = contrasenia;
     }
+
+    
+
 
     public String getEmail() {
         return this.email;
@@ -72,7 +73,7 @@ public class UsersEntity {
     }
 
     public UsersEntity usuario(String usuario) {
-        setusuario(usuario);
+        setUsuario(usuario);
         return this;
     }
 
@@ -122,7 +123,7 @@ public class UsersEntity {
      */
     @Override
     public String toString() {
-        return  getusuario() + "," + getContrasenia() + "," + getEmail() + "\n";
+        return  getUsuario() + "," + getContrasenia() + "," + getEmail() + "\n";
     }
 
 
