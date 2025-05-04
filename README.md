@@ -119,4 +119,4 @@ El proyecto consiste en un sistema de gestión de reservas para hoteles, diseña
 
 
 
-[¡Ver más imágenes!](images\appi-v-1\login-version-1.0.0.png)
+[¡Ver más imágenes!](images)
