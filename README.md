@@ -123,3 +123,10 @@ El proyecto consiste en un sistema de gestión de reservas para hoteles, diseña
 | 🌐 **GitHub**                 | Utilizamos **GitHub** como plataforma de control de versiones y colaboración. Permite trabajar en equipo, gestionar ramas, revisar código con **pull requests** y llevar un historial limpio del proyecto.                                  |
 | 🛡️ **`.gitignore`**          | Incluimos un archivo **`.gitignore`** para excluir archivos innecesarios o generados automáticamente (como `target/`, `.idea/`, etc.), manteniendo el repositorio **limpio y profesional**.                                                 |
 | 🤝 **`CONTRIBUTING.md`**      | El archivo **`CONTRIBUTING.md`** proporciona una guía clara para que otros desarrolladores puedan contribuir al proyecto. Incluye pautas de estilo, normas para enviar cambios y cómo reportar errores o sugerencias de mejora.             |
+
+
+
+
+
+
+**Author: Habccode** 🧑‍💻🧠
