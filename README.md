@@ -115,7 +115,7 @@ El gestor de agencia de viajes facilita la reserva de habitaciones en nombre de 
 El proyecto consiste en un sistema de gestión de reservas para hoteles, diseñado para facilitar tanto a los clientes como a los empleados la administración de las habitaciones y los pagos. Los clientes pueden realizar reservas online a través de la web o la aplicación del hotel, eligiendo fechas, tipo de habitación y número de huéspedes. Si prefieren hacerlo manualmente, el recepcionista puede gestionar la reserva de manera directa. El sistema también permite la integración con agencias de viajes, lo que aumenta la visibilidad del hotel. Además, se garantiza la seguridad y facilidad en los pagos mediante sistemas externos. A continuación, se muestra la interfaz de inicio de sesión del sistema.
 
 
-<img src="images\appi-v-1\version-1.0.0.png">
+<img src="images\appi-v-1\login-version-1.0.0.png">
 
 
 
