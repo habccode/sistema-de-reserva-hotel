@@ -33,11 +33,7 @@ Este sistema permite gestionar reservas de habitaciones de manera eficiente, ofr
   - Realiza la validación de reservas y pagos.
   - Envía confirmaciones al cliente.
 
-### 4. **Gestor de Agencia de Viajes**
-- **Descripción**: Intermediario que facilita reservas a nombre de agencias de viajes.
-- **Acciones**:
-  - Accede a la información de disponibilidad.
-  - Realiza reservas para sus clientes.
+
 
 ---
 
@@ -73,16 +69,6 @@ El sistema de reservas gestiona la información sobre las habitaciones, la dispo
 2. **Procesa el pago** a través de un sistema de pagos externo (Ej. Stripe, PayPal).
 3. **Confirma la reserva** y la registra en la base de datos.
 4. **Envía una confirmación** de la reserva al cliente por correo electrónico o mensaje.
-
----
-
-### **Gestor de Agencia de Viajes**
-
-El gestor de agencia de viajes facilita la reserva de habitaciones en nombre de sus clientes.
-
-1. **Accede a la información de disponibilidad** en tiempo real.
-2. **Realiza reservas** para sus clientes, ofreciendo opciones de habitación y precios.
-3. **Gestiona pagos** para las reservas realizadas.
 
 ---
 
