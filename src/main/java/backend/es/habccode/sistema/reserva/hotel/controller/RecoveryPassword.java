@@ -8,7 +8,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-
+/**
+ * @author: habccode
+ * @version: 1.0.0
+ */
 public class RecoveryPassword {
     
     // button de ir a la interface anterior

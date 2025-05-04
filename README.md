@@ -120,3 +120,19 @@ El proyecto consiste en un sistema de gestión de reservas para hoteles, diseña
 
 
 [¡Ver más imágenes!](images)
+
+
+
+## **TecTecnologías**:
+
+| 💻 Tecnología   | 📄 Descripción                                                                                                                                                                                                                         |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 🖥️ **Java**    | Utilizamos **Java** como lenguaje principal de programación por su **robustez, portabilidad** y **amplio soporte** para aplicaciones de escritorio. Es ideal para sistemas **seguros y escalables**, como el de reservas hoteleras.    |
+| 🎨 **JavaFX**   | Desarrollamos la **interfaz gráfica** con **JavaFX**, una librería moderna de Java para construir UIs **interactivas y visualmente atractivas**. Permite una experiencia fluida e intuitiva para los usuarios al realizar reservas.    |
+| 🗄️ **SQLite3** | Implementamos **SQLite3** como base de datos por ser **ligera, integrada** y **sin necesidad de servidor**. Es perfecta para aplicaciones de escritorio con necesidades moderadas de almacenamiento, y se integra fácilmente con Java. |
+| 🎨 **CSS**      | Usamos **CSS** para estilizar la interfaz JavaFX, logrando una separación clara entre lógica y presentación. Esto mejora la **apariencia visual** y facilita el **mantenimiento** del sistema.                                         |
+| ⚙️ **Maven**    | Gestionamos el proyecto con **Apache Maven**, una herramienta para la **automatización de compilación** y **gestión de dependencias**. Ayuda a mantener el orden del proyecto y facilita el uso de librerías externas.                 |
+
+
+
+

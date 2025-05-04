@@ -1,10 +1,12 @@
 package backend.es.habccode.sistema.reserva.hotel.controller;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.text.Text;
-
+/**
+ * @author: habccode
+ * @version: 1.0.0
+ */
 public class MenuController {
     
 

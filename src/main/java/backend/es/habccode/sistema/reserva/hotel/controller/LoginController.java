@@ -14,7 +14,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-
+/**
+ * @author: habccode
+ * @version: 1.0.0
+ */
 public class LoginController extends AbstractController {
     
     private final String usuario = "primer usuario";

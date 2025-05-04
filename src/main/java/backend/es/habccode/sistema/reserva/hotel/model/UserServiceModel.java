@@ -1,13 +1,14 @@
 package backend.es.habccode.sistema.reserva.hotel.model;
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-
 import backend.es.habccode.sistema.reserva.hotel.model.conexion.Conexion;
-
+/**
+ * @author: habccode
+ * @version: 1.0.0
+ */
 public class UserServiceModel extends Conexion {
 
     private ArrayList<UsersEntity> usuarios;

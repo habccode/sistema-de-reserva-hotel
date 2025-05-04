@@ -1,11 +1,8 @@
 package backend.es.habccode.sistema.reserva.hotel.controller.abstractas;
-
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Properties;
-
 import backend.es.habccode.sistema.reserva.hotel.model.UserServiceModel;
 import backend.es.habccode.sistema.reserva.hotel.model.UsersEntity;
 import javafx.fxml.FXML;
