@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="723.0" prefWidth="950.0" styleClass="VBox" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="backend.es.habccode.sistema.reserva.hotel.Menu.Controller">
+<VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="723.0" prefWidth="950.0" styleClass="VBox" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="backend.es.habccode.sistema.reserva.hotel.controller.MenuController">
    <children>
       <AnchorPane prefHeight="643.0" prefWidth="828.0">
          <children>
