@@ -21,6 +21,10 @@ import javafx.stage.Stage;
  */
 public class RegisterController extends AbstractController {
 
+
+    //texto del hotel esperial
+    @FXML
+    private Text texthotel;
     // texto de usuario
     @FXML
     Text textUsuario;
