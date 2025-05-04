@@ -34,10 +34,10 @@ public class UserServiceModel extends Conexion {
             ResultSet resultado = sentencia.executeQuery();
 
             while (resultado.next()) {
-                String usersStr = resultado.getString("usuario");
+                String userStr = resultado.getString("usuario");
                 String contraseniaStr = resultado.getString("contraseña");
                 String emailStr = resultado.getString("email");
-                UsersEntity usuario = new UsersEntity(usersStr, contraseniaStr, emailStr);
+                UsersEntity usuario = new UsersEntity(userStr, contraseniaStr, emailStr);
                 usuarioEntities.add(usuario);
             }
         } catch (SQLException e) {
@@ -69,7 +69,7 @@ public class UserServiceModel extends Conexion {
         if (user == null) {
             return false;
         }
-        String sqlSentencia = "INSERT INTO usuarios (usuario, contraseña, email) VALUES (?, ?, ?)";
+        String sqlSentencia = "INSERT INTO usuario (usuario, contraseña, email) VALUES (?, ?, ?)";
         return escribirUser(sqlSentencia, user);
         
     }
@@ -91,7 +91,7 @@ public class UserServiceModel extends Conexion {
           */
 
     public UsersEntity obtenerUsuariosPorEmail(String email) {
-        String sql = "SELECT * FROM usuarios WHERE email = ?";
+        String sql = "SELECT * FROM usuario WHERE email = ?";
         try {
             PreparedStatement stmt = conectar().prepareStatement(sql);
             stmt.setString(1, email);
@@ -116,7 +116,7 @@ public class UserServiceModel extends Conexion {
      * @return lista de usuarios
      */
     public ArrayList<UsersEntity> obtenerTodosLosUsuarios(){
-        String sql = "SELECT * FROM usuarios";
+        String sql = "SELECT * FROM usuario";
         return loadUser(sql);
     }
 

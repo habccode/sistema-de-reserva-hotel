@@ -8,6 +8,7 @@ import backend.es.habccode.sistema.reserva.hotel.model.UsersEntity;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -103,6 +104,19 @@ public class RegisterController extends AbstractController {
             return;
         }
         getUserServiceModel().agregarUser(nuevoUsuario);
+
+        // Mostrar mensaje de éxito
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Registro Exitoso");
+        alert.setHeaderText(null);
+        alert.setContentText("Usuario registrado correctamente");
+        alert.showAndWait();
+
+        // Opcional: limpiar campos después del registro
+        TextFieldUsuario.clear();
+        textFieldPassword.clear();
+        textFieldEmail.clear();
+        errorText.setText(""); // Limpiar errores
     }
 
     /**
@@ -111,36 +125,45 @@ public class RegisterController extends AbstractController {
      * @return
      */
     private boolean comprobarRegistrar() {
+        //condicion si es vacia de usuario
         if (!comprobarTextField(TextFieldUsuario)) {
             errorText.setText("Usuario no puede estar vacio");
             return false;
         }
+        // usuario no puede estar vacio
         if (!comprobarTextField(textFieldUsuarioRepetir)) {
             errorText.setText("Usuario no puede estar vacio");
             return false;
         }
-        if (!TextFieldUsuario.getText().equals(textFieldUsuarioRepetir)) {
+        // el usuario no coincide
+        if (TextFieldUsuario.getText().equals(textFieldUsuarioRepetir)) {
             errorText.setText("el usuario no coincide");
         }
+        // la contrseña no puede estar vacia
         if (!comprobarTextField(textFieldPassword)) {
             errorText.setText("Contraseña no puede estar vacia");
             return false;
         }
+        // la contraseña no puede estar vacia
         if (!comprobarTextField(textFieldPasswordRepetir)) {
             errorText.setText("Repewtir contraseña no puede estar vacio");
             return false;
         }
-        if (!textFieldPassword.getText().equals(textFieldPasswordRepetir)) {
+        //las contraseñas no coinciden
+        if (textFieldPassword.getText().equals(textFieldPasswordRepetir)) {
             errorText.setText("las contraseñas no coinciden");
         }
+        // el correo no puede estar vacio
         if (!comprobarTextField(textFieldEmail)) {
             errorText.setText("El correo no puede estar vacio");
         }
+        // el correo no puede estar vacio
         if (!comprobarTextField(textFieldEmailRepetir)) {
             errorText.setText("El correo no puede estar vacio");
             return false;
         }
-        if (!textFieldEmail.getText().equals(textFieldEmailRepetir)) {
+        // el correo no coincide
+        if (textFieldEmail.getText().equals(textFieldEmailRepetir)) {
             errorText.setText("los correos deben coincidir");
             return false;
         }
