@@ -124,7 +124,7 @@ El proyecto consiste en un sistema de gestión de reservas para hoteles, diseña
 | 🛡️ **`.gitignore`**          | Incluimos un archivo **`.gitignore`** para excluir archivos innecesarios o generados automáticamente (como `target/`, `.idea/`, etc.), manteniendo el repositorio **limpio y profesional**.                                                 |
 | 🤝 **`CONTRIBUTING.md`**      | El archivo **`CONTRIBUTING.md`** proporciona una guía clara para que otros desarrolladores puedan contribuir al proyecto. Incluye pautas de estilo, normas para enviar cambios y cómo reportar errores o sugerencias de mejora.             |
 
-
+---
 
 
 
