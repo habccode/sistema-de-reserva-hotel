@@ -48,4 +48,19 @@ public class MenuController {
     @FXML
     private Button buttonPerfil;
 
+    /**
+     * button atras
+     */
+    public void openClickButtonAtras(){}
+
+
+    //button selecciona
+    public void onClickbuttonSelecciona(){}
+    
+
+    //button selecciona
+    public void openClickButtonPerfil(){}
+
+
+    //
 }
