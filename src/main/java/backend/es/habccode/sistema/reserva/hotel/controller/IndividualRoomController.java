@@ -1,5 +1,5 @@
 package backend.es.habccode.sistema.reserva.hotel.controller;
 
-public class MatrimonialController {
+public class IndividualRoomController {
     
 }

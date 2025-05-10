@@ -2,6 +2,7 @@ package backend.es.habccode.sistema.reserva.hotel.controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.RadioButton;
 import javafx.scene.text.Text;
 /**
  * @author: habccode
@@ -25,24 +26,24 @@ public class MenuController {
 
     // checkbox de habitacion individual
     @FXML
-    private CheckBox individual;
+    private RadioButton radioButtonIndividual;
 
     // button de seleccionar la habitacion
     @FXML
     private Button buttonSelecciona;
 
 
-    // checkbox matrimonial
+    // RadioButton matrimonial
     @FXML
-    private CheckBox matrimonial;
+    private RadioButton radioButtonMatrimonial;
 
-    // CheckBox de suit
+    // RadioButton de suit
     @FXML
-    private CheckBox suits;
+    private RadioButton rabioButtonSuits;
 
-    // CheckBox de suit
+    // RadioButton de suit
     @FXML
-    private CheckBox doble;
+    private RadioButton radioButtonDoble;
 
     // button del perfil
     @FXML
