@@ -13,8 +13,8 @@ import javafx.stage.Stage;
 public class Main extends Application {
       @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/view/menu.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(),950, 852 );
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/view/SuitRoom.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Pantalla Principal");
         stage.setScene(scene);
         stage.show();
